@@ -25,7 +25,7 @@ public class TileChanger : MonoBehaviour
     private void ChangeTile()
     {
         _currentVariant.SetActive(false);
-        _currentVariant = _variants[Random.Range(0, _variants.Length-1)];
+        _currentVariant = _variants[Random.Range(0, _variants.Length)];
         _currentVariant.SetActive(true);
     }
 }
