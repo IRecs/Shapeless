@@ -12,18 +12,17 @@ public class TileChanger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        
-
-        if (other.gameObject.tag == "Player") 
-            changeTile();    
+        if (other.gameObject.CompareTag("Player")) 
+            ChangeTile();    
     }
 
-    private void OnTriggerExit(Collider other)
-    {
+    private void OnTriggerExit(Collider other) =>
         _currentVariant.SetActive(false);
-    }
 
-    void changeTile()
+    private void OnBecameInvisible() =>
+        _currentVariant.SetActive(false);
+
+    private void ChangeTile()
     {
         _currentVariant.SetActive(false);
         _currentVariant = _variants[Random.Range(0, _variants.Length-1)];
