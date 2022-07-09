@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6095f1dabdfd4246947b42aa14361bb5, type: 3}
+  m_Name: AssetContainer
+  m_EditorClassIdentifier: 
+  Floors:
+  - {fileID: 3610784758778315544, guid: 64f7a0b3f4456444882ef7528372b512, type: 3}
+  Walls:
+  - {fileID: 8053512611436546619, guid: 19dbcb9b94b0e6c4e8d1b8215134a712, type: 3}
+  Doors: []
