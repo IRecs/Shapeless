@@ -13,59 +13,98 @@ MonoBehaviour:
   m_Name: GenerationRules
   m_EditorClassIdentifier: 
   generationRule:
-  - chance: 1
+  - superPositionTreasHold: 10
+    chance: 1
     line1: {x: -1, y: -1, z: -1}
     line2: {x: -1, y: 0, z: -1}
     line3: {x: -1, y: -1, z: -1}
-  - chance: 0.5
-    line1: {x: 0, y: 0, z: 0}
-    line2: {x: 1, y: 1, z: 1}
-    line3: {x: 0, y: 0, z: 0}
-  - chance: 0.5
+  - superPositionTreasHold: 10
+    chance: 0.2
     line1: {x: 0, y: 0, z: 0}
     line2: {x: -1, y: 1, z: 1}
     line3: {x: 0, y: 0, z: 0}
-  - chance: 0.5
+  - superPositionTreasHold: 10
+    chance: 0.1
     line1: {x: 0, y: 0, z: 0}
     line2: {x: 1, y: 1, z: -1}
     line3: {x: 0, y: 0, z: 0}
-  - chance: 0.9
-    line1: {x: 0, y: 0, z: 0}
-    line2: {x: 2, y: 1, z: 0}
-    line3: {x: 0, y: 0, z: 0}
-  - chance: 0.9
-    line1: {x: 0, y: 0, z: 0}
-    line2: {x: 0, y: 1, z: 2}
-    line3: {x: 0, y: 0, z: 0}
-  - chance: 0.1
-    line1: {x: 0, y: 0, z: 0}
+  - superPositionTreasHold: 3
+    chance: 0.5
+    line1: {x: -1, y: 0, z: -1}
+    line2: {x: 3, y: 1, z: 4}
+    line3: {x: -1, y: 0, z: -1}
+  - superPositionTreasHold: 3
+    chance: 0.5
+    line1: {x: -1, y: 0, z: -1}
+    line2: {x: 5, y: 1, z: 6}
+    line3: {x: -1, y: 0, z: -1}
+  - superPositionTreasHold: 10
+    chance: 0.2
+    line1: {x: 0, y: 2, z: 0}
     line2: {x: 0, y: 2, z: 0}
-    line3: {x: 0, y: 0, z: 0}
-  - chance: 0.3
-    line1: {x: 0, y: 0, z: 0}
-    line2: {x: 0, y: 1, z: 0}
-    line3: {x: 0, y: 1, z: 0}
-  - chance: 0.3
-    line1: {x: 0, y: 1, z: 0}
-    line2: {x: 0, y: 1, z: 0}
-    line3: {x: 0, y: 0, z: 0}
-  - chance: 0.3
+    line3: {x: 0, y: 2, z: 0}
+  - superPositionTreasHold: 3
+    chance: 0.5
+    line1: {x: -1, y: 4, z: -1}
+    line2: {x: 0, y: 2, z: 0}
+    line3: {x: -1, y: 5, z: -1}
+  - superPositionTreasHold: 3
+    chance: 0.5
+    line1: {x: -1, y: 3, z: -1}
+    line2: {x: 0, y: 2, z: 0}
+    line3: {x: -1, y: 6, z: -1}
+  - superPositionTreasHold: 1
+    chance: 0.5
     line1: {x: -1, y: -1, z: -1}
-    line2: {x: -1, y: 0, z: 1}
-    line3: {x: -1, y: 1, z: 1}
-  - chance: 0.3
-    line1: {x: 0, y: -1, z: 0}
-    line2: {x: 0, y: 1, z: 0}
-    line3: {x: 0, y: 1, z: 0}
-  - chance: 0.3
-    line1: {x: 0, y: 1, z: 0}
-    line2: {x: 0, y: 1, z: 0}
-    line3: {x: 0, y: -1, z: 0}
-  - chance: 0.3
-    line1: {x: 1, y: 1, z: -1}
-    line2: {x: 1, y: 0, z: -1}
+    line2: {x: -1, y: 3, z: 1}
+    line3: {x: -1, y: 2, z: 0}
+  - superPositionTreasHold: 1
+    chance: 0.5
+    line1: {x: -1, y: -1, z: -1}
+    line2: {x: 1, y: 4, z: -1}
+    line3: {x: 0, y: 2, z: -1}
+  - superPositionTreasHold: 1
+    chance: 0.5
+    line1: {x: -1, y: -1, z: -1}
+    line2: {x: -1, y: 5, z: 1}
+    line3: {x: -1, y: 2, z: 0}
+  - superPositionTreasHold: 1
+    chance: 0.5
+    line1: {x: -1, y: -1, z: -1}
+    line2: {x: 1, y: 6, z: -1}
+    line3: {x: 0, y: 2, z: -1}
+  - superPositionTreasHold: 2
+    chance: 0.3
+    line1: {x: -1, y: -1, z: -1}
+    line2: {x: 1, y: 7, z: 1}
+    line3: {x: 0, y: 2, z: 0}
+  - superPositionTreasHold: 2
+    chance: 0.3
+    line1: {x: 0, y: 2, z: -1}
+    line2: {x: 1, y: 8, z: -1}
+    line3: {x: 0, y: 2, z: -1}
+  - superPositionTreasHold: 2
+    chance: 0.3
+    line1: {x: -1, y: 2, z: 0}
+    line2: {x: -1, y: 9, z: 1}
+    line3: {x: -1, y: 2, z: 0}
+  - superPositionTreasHold: 2
+    chance: 0.3
+    line1: {x: 0, y: 2, z: 0}
+    line2: {x: 1, y: 10, z: 1}
     line3: {x: -1, y: -1, z: -1}
-  - chance: 0.3
+  - superPositionTreasHold: 2
+    chance: 0.3
+    line1: {x: 0, y: 2, z: 0}
+    line2: {x: 1, y: 11, z: 1}
+    line3: {x: 0, y: 2, z: 0}
+  - superPositionTreasHold: 1
+    chance: 0.3
     line1: {x: -1, y: -1, z: -1}
-    line2: {x: 1, y: 0, z: -1}
-    line3: {x: 1, y: 1, z: -1}
+    line2: {x: 1, y: 1, z: 1}
+    line3: {x: -1, y: -1, z: -1}
+  - superPositionTreasHold: 1
+    chance: 0.4
+    line1: {x: -1, y: 2, z: -1}
+    line2: {x: -1, y: 2, z: -1}
+    line3: {x: -1, y: 2, z: -1}

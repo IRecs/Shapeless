@@ -1810,7 +1810,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 17.19
+  orthographic size: 16.16
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1833,14 +1833,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 73770543}
-  m_LocalRotation: {x: 0.24903797, y: -0.6618007, z: 0.24903797, w: 0.6618007}
-  m_LocalPosition: {x: 22.7, y: 19.1, z: 0.2}
+  m_LocalRotation: {x: 0.35355338, y: -0.35355338, z: 0.1464466, w: 0.8535535}
+  m_LocalPosition: {x: 14.45, y: 19.1, z: -12.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1709342510}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 41.243, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 45, y: -45, z: 0}
 --- !u!1001 &73861226
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4483,6 +4483,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 282589579731991546, guid: b4a8e793d3ff5bb4987d5e936bf1b1ea, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4814965455206461099, guid: b4a8e793d3ff5bb4987d5e936bf1b1ea, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8418681740965904260, guid: b4a8e793d3ff5bb4987d5e936bf1b1ea, type: 3}
@@ -49158,7 +49162,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1709342505}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.35, y: 0.2, z: 29.36}
+  m_LocalPosition: {x: 19.75, y: 0.2, z: 25.54}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -49198,7 +49202,7 @@ MonoBehaviour:
   _playerPositionChecker: {fileID: 888293999}
   _middleTile: {fileID: 1564436212}
   _middleTileCoords: {x: 15, y: 15}
-  _visionRadius: 3
+  _visionRadius: 2
   rigidbody: {fileID: 0}
 --- !u!114 &1709342514
 MonoBehaviour:
@@ -59705,6 +59709,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   generationRules: {fileID: 11400000, guid: 73d1b7db1825dd84fa956e6869887242, type: 2}
+  antiGenerationRules: {fileID: 11400000, guid: 6aa8258e1c4fb4048952f84980af7850, type: 2}
 --- !u!1001 &2127474202
 PrefabInstance:
   m_ObjectHideFlags: 0

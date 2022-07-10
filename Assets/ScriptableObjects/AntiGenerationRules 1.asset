@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88ba3b82de4949649864e069db9c85a6, type: 3}
+  m_Name: AntiGenerationRules 1
+  m_EditorClassIdentifier: 
+  generationRule:
+  - superPositionTreasHold: 0
+    chance: 0
+    line1: {x: -1, y: -1, z: -1}
+    line2: {x: -1, y: 1, z: 5}
+    line3: {x: -1, y: -1, z: -1}
+  - superPositionTreasHold: 0
+    chance: 0
+    line1: {x: -1, y: -1, z: -1}
+    line2: {x: -1, y: 1, z: 3}
+    line3: {x: -1, y: -1, z: -1}
+  - superPositionTreasHold: 0
+    chance: 0
+    line1: {x: -1, y: -1, z: -1}
+    line2: {x: 4, y: 1, z: -1}
+    line3: {x: -1, y: -1, z: -1}
+  - superPositionTreasHold: 1
+    chance: 0
+    line1: {x: -1, y: 2, z: -1}
+    line2: {x: 1, y: 3, z: -1}
+    line3: {x: -1, y: -1, z: -1}
+  - superPositionTreasHold: 1
+    chance: 0
+    line1: {x: -1, y: 2, z: -1}
+    line2: {x: -1, y: 4, z: 1}
+    line3: {x: -1, y: -1, z: -1}
+  - superPositionTreasHold: 1
+    chance: 0
+    line1: {x: -1, y: -1, z: -1}
+    line2: {x: 1, y: 5, z: -1}
+    line3: {x: -1, y: 2, z: -1}
+  - superPositionTreasHold: 1
+    chance: 0
+    line1: {x: -1, y: -1, z: -1}
+    line2: {x: -1, y: 6, z: 1}
+    line3: {x: -1, y: 2, z: -1}
+  - superPositionTreasHold: 0
+    chance: 0
+    line1: {x: -1, y: 2, z: -1}
+    line2: {x: -1, y: 2, z: 1}
+    line3: {x: -1, y: -1, z: -1}
+  - superPositionTreasHold: 2
+    chance: 0
+    line1: {x: -1, y: 2, z: -1}
+    line2: {x: 2, y: 1, z: 2}
+    line3: {x: -1, y: 2, z: -1}
+  - superPositionTreasHold: 2
+    chance: 0
+    line1: {x: -1, y: 1, z: -1}
+    line2: {x: 1, y: 2, z: 1}
+    line3: {x: -1, y: 1, z: -1}

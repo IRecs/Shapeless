@@ -47,7 +47,7 @@ public class TileChanger : MonoBehaviour
 
    public void UpdateTile()
     {
-        if (tile.prefabId == -1) { return; }
+        if (tile.prefabId == -1) { _currentVariant.SetActive(false); return; }
 
         _currentVariant.SetActive(false);
         _currentVariant = _variants[tile.prefabId];

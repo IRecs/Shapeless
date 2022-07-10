@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
 
     private void MovePlayer()
     {
-        rb.velocity = new Vector3(_verticalInput * speed*Time.deltaTime, rb.velocity.y, _horizontalInput * speed*Time.deltaTime);
+        rb.velocity = new Vector3(_verticalInput * speed*Time.deltaTime, rb.velocity.y, _horizontalInput * speed*Time.fixedDeltaTime);
         rb.velocity = Vector3.ClampMagnitude(rb.velocity, speed * Time.deltaTime);
     }
 }

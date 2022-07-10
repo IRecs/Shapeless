@@ -12,6 +12,7 @@ public class PrefabSet : ScriptableObject
 [System.Serializable]
 public struct Vec3AsGridCostil
 {
+    public int superPositionTreasHold;
     public float chance;
     public Vector3Int line1;
     public Vector3Int line2;

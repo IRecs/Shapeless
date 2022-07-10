@@ -6,6 +6,7 @@ public class TilesBase : MonoBehaviour
 {
     public Tile[,] tiles;
     [SerializeField] private GenerationRules generationRules;
+    [SerializeField] private GenerationRules antiGenerationRules;
 
     private void Start()
     {tiles =  new Tile[transform.childCount, transform.GetChild(0).childCount];
@@ -33,7 +34,7 @@ public class TilesBase : MonoBehaviour
                 tiles[i, j].tilesBase = tiles;
                 tiles[i, j].prefabId = -1;
                 tiles[i, j].generationRules = generationRules;
-
+                tiles[i, j].antiGenerationRules = antiGenerationRules;
 
                 if (tiles[i, j].tileChanger != null)
                     tiles[i, j].tileChanger.tile = tiles[i,j];

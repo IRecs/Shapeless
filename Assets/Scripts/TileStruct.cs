@@ -15,6 +15,7 @@ public class Tile
 
     public int prefabId;
     public GenerationRules generationRules;
+    public GenerationRules antiGenerationRules;
 
     public void GenerateNewState()
     {
@@ -38,9 +39,21 @@ public class Tile
 
                 for (int i = 0; i < generationRules.generationRule.Length; i++)
         { 
-       if( CheckRule(_aroundTiles, generationRules.GetData(i)) && Random.Range(0f,1f) < generationRules.generationRule[i].chance)
+       if( CheckRule(_aroundTiles, generationRules.GetData(i),generationRules.generationRule[i].superPositionTreasHold) 
+                && Random.Range(0f,1f) < generationRules.generationRule[i].chance)
             {
+
+                bool antiRulesCheck = false;
+
+                for (int j = 0; j < antiGenerationRules.generationRule.Length; j++)
+                    if (CheckAntiRule(_aroundTiles, antiGenerationRules.GetData(j), antiGenerationRules.generationRule[j].superPositionTreasHold, generationRules.GetData(i)[1, 1]))
+                        antiRulesCheck = true;
+
+                if (antiRulesCheck) continue;
+                        
                 prefabId = generationRules.GetData(i)[1, 1];
+
+
                 //Debug.Log("New" + prefabId);
                 continue;
             }
@@ -50,18 +63,62 @@ public class Tile
 
 
 
-    bool CheckRule(int[,] _aroundTiles, int[,] _rule)
+    bool CheckRule(int[,] _aroundTiles, int[,] _rule, int superPositionTreashHold)
     {
+        int _superPositionCounter = 0;
         
         for (int i=0; i<3;i++)
             for (int j=0; j < 3; j++)
             {
                 if (i==1 && j==1)
                     continue;
-                if (_aroundTiles[i, j] == -1 || _rule[i, j] == -1) 
+                if (_aroundTiles[i, j] == -1 || _rule[i, j] == -1)
+                {
+                    if (_aroundTiles[i, j] == -1 && _rule[i, j] != -1)
+                        _superPositionCounter++;
+
+                    if (_superPositionCounter > superPositionTreashHold)
+                        return false;
+
                     continue;
+                }
                 if (_aroundTiles[i, j] != _rule[i, j]) 
                     return false;
+            }
+
+        return true;
+    }
+
+    bool CheckAntiRule(int[,] _aroundTiles, int[,] _antiRule, int superPositionTreashHold, int idToCheck)
+    {
+        int _superPositionCounter = 0;
+
+        if (idToCheck != _antiRule[1, 1]) return false;
+
+        for (int i = 0; i < 3; i++)
+            for (int j = 0; j < 3; j++)
+            {
+                if (i == 1 && j == 1)
+                    continue;
+
+                if (_aroundTiles[i, j] == -1 || _antiRule[i, j] == -1)
+                {
+                    if (superPositionTreashHold > -1)
+                    {
+                        if (_aroundTiles[i, j] == -1 && _antiRule[i, j] != -1)
+                            _superPositionCounter++;
+
+                        if (_superPositionCounter > superPositionTreashHold)
+                        {
+
+                            return false;
+                        }
+                    }
+                    continue;
+                }
+                if (_aroundTiles[i, j] != _antiRule[i, j])                
+                    return false;
+                
             }
 
         return true;
