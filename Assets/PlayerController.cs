@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
 
     float _verticalInput = 0;
     float _horizontalInput = 0;
+    
     void Start()
     {
         rb = GetComponent<Rigidbody>();   

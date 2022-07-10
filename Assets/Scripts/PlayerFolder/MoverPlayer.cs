@@ -40,10 +40,10 @@ namespace PlayerFolder
             _characterController.Move(_movementSpeed * movementVector * Time.deltaTime);
         }
 
-        private void Warp(Vector3Data to)
+        public void Warp(Vector3 to)
         {
             _characterController.enabled = false;
-            transform.position = to.AsUnityVector().AddY(_characterController.height);
+            transform.localPosition =  to;
             _characterController.enabled = true;
         }
     }
