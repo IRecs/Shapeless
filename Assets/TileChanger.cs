@@ -4,29 +4,59 @@ using UnityEngine;
 
 public class TileChanger : MonoBehaviour
 {
-    private Tile _tile;
+  
     [SerializeField] private PrefabSet _prefabSet;
     [SerializeField] private GameObject[] _variants;
     [SerializeField] private GameObject _currentVariant;
+    public Tile tile;
 
+    private void Start()
+    {
+        _currentVariant.SetActive(false);
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        
+
+        if (tile.prefabId != -1) return;
 
         if (other.gameObject.tag == "Player") 
-            changeTile();    
+            ChangeTile();    
     }
 
     private void OnTriggerExit(Collider other)
     {
-        _currentVariant.SetActive(false);
+        if (other.gameObject.tag == "Player")
+        {
+            tile.prefabId = -1;
+            _currentVariant.SetActive(false);
+
+        }
     }
 
-    void changeTile()
+
+    
+
+    public void ChangeTile()
     {
         _currentVariant.SetActive(false);
-        _currentVariant = _variants[Random.Range(0, _variants.Length-1)];
+        tile.GenerateNewState();
+        _currentVariant = _variants[tile.prefabId];//_variants[Random.Range(0, _variants.Length-1)];
         _currentVariant.SetActive(true);
+    }
+
+   public void UpdateTile()
+    {
+        if (tile.prefabId == -1) { return; }
+
+        _currentVariant.SetActive(false);
+        _currentVariant = _variants[tile.prefabId];
+        _currentVariant.SetActive(true);
+    }
+
+    public void MakeDisable()
+    {
+        tile.prefabId = -1;
+        UpdateTile();
     }
 }

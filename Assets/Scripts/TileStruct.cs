@@ -2,10 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public struct Tile
+public class Tile
 {
-    public Tile[,] aroundTiles;
-
+    public int xPos;
+    public int yPos;
+    public GameObject tileObject;
+    public TileChanger tileChanger;
+   
+    public Tile[,] tilesBase;
 
 
 
@@ -20,14 +24,25 @@ public struct Tile
 
         for (int i = 0; i < 3; i++)
             for (int j = 0; j < 3; j++)
-                _aroundTiles[i, j] = aroundTiles[i, j].prefabId;
-
+            {
+                if (xPos - 1 + i < 0 || xPos - 1 + i > tilesBase.GetLength(0) || yPos - 1 + j < 0 || yPos - 1 + j > tilesBase.GetLength(1))
+                {
+                    _aroundTiles[i, j] = -1;
+                    continue;
+                        }
+                
+                _aroundTiles[i, j] = tilesBase[xPos - 1 + i, yPos - 1 + j].prefabId;
+                //Debug.Log(_aroundTiles[i, j] + " "+ tilesBase[xPos - 1 + i, yPos - 1 + j].xPos+ " "+ tilesBase[xPos - 1 + i, yPos - 1 + j].yPos + " "+ tilesBase[xPos - 1 + i, yPos - 1 + j].prefabId);
+                    //aroundTiles[i, j].prefabId;
+            }
 
                 for (int i = 0; i < generationRules.generationRule.Length; i++)
         { 
-       if( CheckRule(_aroundTiles, generationRules.GetData(i)))
+       if( CheckRule(_aroundTiles, generationRules.GetData(i)) && Random.Range(0f,1f) < generationRules.generationRule[i].chance)
             {
                 prefabId = generationRules.GetData(i)[1, 1];
+                //Debug.Log("New" + prefabId);
+                continue;
             }
            
         }
