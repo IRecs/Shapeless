@@ -13,6 +13,7 @@ namespace PlayerFolder
 
         private IInputService _inputService;
         private Camera _camera;
+        [SerializeField]private AudioSource _audioSource;
 
         private void Awake()
         {
@@ -35,9 +36,12 @@ namespace PlayerFolder
 
                 transform.forward = movementVector;
                 _animator.SetFloat("Speed", 1);
+                if(!_audioSource.isPlaying)
+                    _audioSource.Play();
             }
             else
             {
+                _audioSource.Stop();
                 _animator.SetFloat("Speed", 0);
             }
 
