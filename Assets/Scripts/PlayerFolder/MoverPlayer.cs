@@ -9,6 +9,8 @@ namespace PlayerFolder
     {
         [SerializeField] private float _movementSpeed;
         [SerializeField] private Animator _animator;
+        [SerializeField] private AudioSource _audioSource;
+        
         private CharacterController _characterController;
 
         private IInputService _inputService;
@@ -35,9 +37,12 @@ namespace PlayerFolder
 
                 transform.forward = movementVector;
                 _animator.SetFloat("Speed", 1);
+                if(!_audioSource.isPlaying)
+                    _audioSource.Play();
             }
             else
             {
+                _audioSource.Stop();
                 _animator.SetFloat("Speed", 0);
             }
 
