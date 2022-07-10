@@ -880,6 +880,10 @@ PrefabInstance:
       value: Plane (1)
       objectReference: {fileID: 0}
     - target: {fileID: 833195102154921840, guid: aa63f7c5e118ffb42bda76baadc5123f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 833195102154921840, guid: aa63f7c5e118ffb42bda76baadc5123f, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -931,6 +935,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2e94a2b9be04e6e4796712dab2de1c31, type: 2}
+    - target: {fileID: 9176493355693453076, guid: aa63f7c5e118ffb42bda76baadc5123f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: aa63f7c5e118ffb42bda76baadc5123f, type: 3}
@@ -1508,6 +1516,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1392d315bcce5a24c96e6924ce6921f5, type: 2}
+    - target: {fileID: 9176493355693453076, guid: aa63f7c5e118ffb42bda76baadc5123f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: aa63f7c5e118ffb42bda76baadc5123f, type: 3}
