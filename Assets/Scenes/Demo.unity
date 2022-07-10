@@ -9904,10 +9904,18 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.92
       objectReference: {fileID: 0}
+    - target: {fileID: 4939919139765786597, guid: af8026460504c0c4c994dfb2a1a35bc3, type: 3}
+      propertyPath: _middleTile
+      value: 
+      objectReference: {fileID: 1564436212}
     - target: {fileID: 4939919139765786599, guid: af8026460504c0c4c994dfb2a1a35bc3, type: 3}
       propertyPath: _animator
       value: 
       objectReference: {fileID: 383651608}
+    - target: {fileID: 4939919139765786599, guid: af8026460504c0c4c994dfb2a1a35bc3, type: 3}
+      propertyPath: _movementSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4939919139765786618, guid: af8026460504c0c4c994dfb2a1a35bc3, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -51251,6 +51259,11 @@ PrefabInstance:
 --- !u!4 &1564436211 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 282589579731991546, guid: b4a8e793d3ff5bb4987d5e936bf1b1ea, type: 3}
+  m_PrefabInstance: {fileID: 1564436210}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1564436212 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8418681740965904260, guid: b4a8e793d3ff5bb4987d5e936bf1b1ea, type: 3}
   m_PrefabInstance: {fileID: 1564436210}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1566122356
