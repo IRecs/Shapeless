@@ -8,6 +8,7 @@ namespace PlayerFolder
     public class MoverPlayer : MonoBehaviour
     {
         [SerializeField] private float _movementSpeed;
+        [SerializeField] private Animator _animator;
         private CharacterController _characterController;
 
         private IInputService _inputService;
@@ -33,6 +34,11 @@ namespace PlayerFolder
                 movementVector.Normalize();
 
                 transform.forward = movementVector;
+                _animator.SetFloat("Speed", 1);
+            }
+            else
+            {
+                _animator.SetFloat("Speed", 0);
             }
 
             movementVector += Physics.gravity;
